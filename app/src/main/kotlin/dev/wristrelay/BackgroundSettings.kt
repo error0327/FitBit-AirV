@@ -82,11 +82,26 @@ class BackgroundSettingsActivity : Activity() {
         options = BackgroundOptions(this, ui)
         val card = ui.card().apply { addView(options.view, ui.stacked()) }
         panel.addView(card, ui.stacked(16))
+        val about = ui.card().apply {
+            addView(ui.label("About", 18, bold = true).apply { isAccessibilityHeading = true })
+            addView(ui.label("Developed by Obada abu alhiga", 14, ui.muted), ui.stacked(6))
+            addView(ui.action("View on GitHub") { openProjectPage() }, ui.stacked(8))
+        }
+        panel.addView(about, ui.stacked(16))
         setContentView(ui.screen(panel))
     }
 
     override fun onResume() {
         super.onResume()
         options.refresh()
+    }
+
+    private fun openProjectPage() {
+        val projectPage = Uri.parse("https://github.com/error0327/fitbit-vib")
+        try {
+            startActivity(Intent(Intent.ACTION_VIEW, projectPage))
+        } catch (_: ActivityNotFoundException) {
+            Toast.makeText(this, "No app can open the GitHub link.", Toast.LENGTH_SHORT).show()
+        }
     }
 }

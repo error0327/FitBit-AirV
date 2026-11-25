@@ -16,7 +16,7 @@ Fitbit Vib is an independent Android companion for the screenless Fitbit Air. Ch
   <tr>
     <td><img src="docs/images/allowlist.png" alt="Fitbit Vib with the main relay switch, test vibration button, and per-app allowlist" width="230"></td>
     <td><img src="docs/images/active-now.png" alt="Active now showing sample apps with current notifications and individual relay switches" width="230"></td>
-    <td><img src="docs/images/background-settings.png" alt="Fitbit Vib Settings with Notification access and Battery optimization" width="230"></td>
+    <td><img src="docs/images/background-settings.png" alt="Fitbit Vib Settings with notification access, battery optimization, and About" width="230"></td>
   </tr>
 </table>
 

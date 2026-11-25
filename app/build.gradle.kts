@@ -11,8 +11,8 @@ android {
         applicationId = "dev.wristrelay"
         minSdk = 32
         targetSdk = 36
-        versionCode = 13
-        versionName = "0.3.3"
+        versionCode = 14
+        versionName = "0.3.4"
     }
 
     compileOptions {
