@@ -19,12 +19,12 @@ internal class BackgroundOptions(private val activity: Activity, private val ui:
     val view = ui.column().apply {
         addView(ui.label("Notification access", 18, bold = true).asHeading())
         addView(notificationStatus, ui.stacked(3))
-        addView(ui.label("Lets Fitbit Vib recognize alerts from the apps you allow and relay them to your band.", 14, ui.muted), ui.stacked(6))
+        addView(ui.label(activity.getString(R.string.notification_access_description, activity.getText(R.string.app_name)), 14, ui.muted), ui.stacked(6))
         addView(notificationAction, ui.stacked(8))
         addView(View(activity), LinearLayout.LayoutParams(1, ui.dp(14)))
         ui.addDivider(this)
         addView(ui.label("Battery optimization", 18, bold = true).asHeading(), ui.stacked(14))
-        addView(ui.label("If alerts are delayed with the screen off, open Battery or Battery usage in Android’s app info for Fitbit Vib.", 14, ui.muted), ui.stacked(6))
+        addView(ui.label(activity.getString(R.string.battery_settings_description, activity.getText(R.string.app_name)), 14, ui.muted), ui.stacked(6))
         addView(batteryAction, ui.stacked(8))
     }
 

@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">Fitbit Vib</string>
+    <string name="app_name">FitBit AirV</string>
+    <string name="notification_access_description">Lets %1$s recognize alerts from the apps you allow and relay them to your band.</string>
+    <string name="battery_settings_description">If alerts are delayed with the screen off, open Battery or Battery usage in Android’s app info for %1$s.</string>
     <style name="AppTheme" parent="android:style/Theme.Material.NoActionBar">
         <item name="android:fontFamily">sans</item>
         <item name="android:colorAccent">@color/vib_cyan</item>
