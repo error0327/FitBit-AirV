@@ -1,0 +1,11 @@
+<resources>
+    <color name="vib_background">#111317</color>
+    <color name="vib_surface">#202329</color>
+    <color name="vib_field">#2A2E36</color>
+    <color name="vib_divider">#393E48</color>
+    <color name="vib_ink">#F2F5F7</color>
+    <color name="vib_muted">#B8C1CC</color>
+    <color name="vib_disabled">#89939F</color>
+    <color name="vib_track_off">#535B67</color>
+    <color name="vib_cyan">#5BE5F3</color>
+</resources>
