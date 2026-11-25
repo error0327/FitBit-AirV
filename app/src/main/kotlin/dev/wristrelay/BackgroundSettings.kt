@@ -24,7 +24,7 @@ internal class BackgroundOptions(private val activity: Activity, private val ui:
         addView(View(activity), LinearLayout.LayoutParams(1, ui.dp(14)))
         ui.addDivider(this)
         addView(ui.label("Battery optimization", 18, bold = true).asHeading(), ui.stacked(14))
-        addView(ui.label("If alerts are delayed with the screen off, check Fitbit Vib’s background battery setting in Android.", 14, ui.muted), ui.stacked(6))
+        addView(ui.label("If alerts are delayed with the screen off, open Battery or Battery usage in Android’s app info for Fitbit Vib.", 14, ui.muted), ui.stacked(6))
         addView(batteryAction, ui.stacked(8))
     }
 
@@ -45,8 +45,8 @@ internal class BackgroundOptions(private val activity: Activity, private val ui:
 
     private fun openBatterySettings() {
         open(
-            Intent(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS),
             Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.fromParts("package", activity.packageName, null)),
+            Intent(Settings.ACTION_SETTINGS),
         )
     }
 

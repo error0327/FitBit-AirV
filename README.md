@@ -29,7 +29,7 @@ You need Android **12L (API 32) or later**, Bluetooth, and **one Fitbit Air** al
 1. Download the signed APK from [GitHub Releases](https://github.com/error0327/fitbit-vib/releases/latest) and open it on Android.
 2. Open Fitbit Vib and allow **Nearby devices**.
 3. In the setup popup or **Settings**, enable **Notification access**. If Android restricts listener access for a sideloaded app, open Fitbit Vib's Android **App info** and check the overflow menu for **Allow restricted settings**.
-4. If background alerts are delayed, tap **Open Android battery settings** in the setup popup or in **Settings**. Android shows and manages the current setting. Find Fitbit Vib in the system list. Some phones put the controls under the app’s **App info**.
+4. If background alerts are delayed, tap **Open Android battery settings** in the setup popup or in **Settings**. This opens Android’s **App info** page for Fitbit Vib. Open **Battery** or **Battery usage** to manage background activity.
 5. Tap **Send test vibration**, then switch on the apps you want under **Allowed apps**. Use **Active now** to review apps with current notifications and change their switches.
 
 The allowlist starts empty. **Relay notifications** pauses automatic alerts while keeping your app choices. **Allow all** enables every app in the regular list, including apps outside the active search.
