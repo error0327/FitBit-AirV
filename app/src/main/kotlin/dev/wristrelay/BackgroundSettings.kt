@@ -3,24 +3,18 @@ package dev.wristrelay
 import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.ComponentName
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.os.PowerManager
 import android.provider.Settings
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.Toast
 
-internal fun batteryOptimizationDisabled(context: Context) =
-    context.getSystemService(PowerManager::class.java).isIgnoringBatteryOptimizations(context.packageName)
-
 internal class BackgroundOptions(private val activity: Activity, private val ui: DarkInstrument) {
     private val notificationStatus = ui.label("", 13, ui.muted)
-    private val batteryStatus = ui.label("", 13, ui.muted)
     private val notificationAction = ui.action("Open notification access") { openNotificationAccess() }
-    private val batteryAction = ui.action("Open battery optimization") { openBatterySettings() }
+    private val batteryAction = ui.action("Open Android battery settings") { openBatterySettings() }
 
     val view = ui.column().apply {
         addView(ui.label("Notification access", 18, bold = true).asHeading())
@@ -30,8 +24,7 @@ internal class BackgroundOptions(private val activity: Activity, private val ui:
         addView(View(activity), LinearLayout.LayoutParams(1, ui.dp(14)))
         ui.addDivider(this)
         addView(ui.label("Battery optimization", 18, bold = true).asHeading(), ui.stacked(14))
-        addView(batteryStatus, ui.stacked(3))
-        addView(ui.label("Turn this off for Fitbit Vib to help relay alerts with the screen off. In Android, choose All apps if Fitbit Vib is hidden.", 14, ui.muted), ui.stacked(6))
+        addView(ui.label("If alerts are delayed with the screen off, check Fitbit Vib’s background battery setting in Android.", 14, ui.muted), ui.stacked(6))
         addView(batteryAction, ui.stacked(8))
     }
 
@@ -39,9 +32,6 @@ internal class BackgroundOptions(private val activity: Activity, private val ui:
         val notificationGranted = Preferences.hasAccess(activity)
         notificationStatus.text = if (notificationGranted) "Access granted" else "Access required"
         notificationStatus.setTextColor(if (notificationGranted) ui.cyan else ui.muted)
-        val unrestricted = batteryOptimizationDisabled(activity)
-        batteryStatus.text = if (unrestricted) "Optimization off for Fitbit Vib" else "Android battery optimization is on"
-        batteryStatus.setTextColor(if (unrestricted) ui.cyan else ui.muted)
     }
 
     private fun openNotificationAccess() {

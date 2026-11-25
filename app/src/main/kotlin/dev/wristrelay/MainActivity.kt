@@ -99,10 +99,6 @@ class MainActivity : Activity() {
             return
         }
         if (Preferences.store(this).getBoolean("background_setup_seen", false)) return
-        if (Preferences.hasAccess(this) && batteryOptimizationDisabled(this)) {
-            finishBackgroundSetup()
-            return
-        }
         val options = BackgroundOptions(this, ui)
         setupOptions = options
         options.refresh()
