@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="docs/images/icon.webp" alt="FitBit AirV cyan wristband icon" width="88">
+  <img src="docs/images/icon.webp" alt="FitBit AirV mint-green V with a pulse line" width="88">
   <h1>FitBit AirV</h1>
   <p>Selected Android notifications, felt on your Fitbit Air.</p>
   <p><a href="https://github.com/error0327/fitbit-vib/releases/latest"><strong>Download the latest APK</strong></a></p>
