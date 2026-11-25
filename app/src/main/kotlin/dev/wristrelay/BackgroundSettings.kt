@@ -97,7 +97,7 @@ class BackgroundSettingsActivity : Activity() {
     }
 
     private fun openProjectPage() {
-        val projectPage = Uri.parse("https://github.com/error0327/fitbit-vib")
+        val projectPage = Uri.parse("https://github.com/error0327/FitBit-AirV")
         try {
             startActivity(Intent(Intent.ACTION_VIEW, projectPage))
         } catch (_: ActivityNotFoundException) {

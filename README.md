@@ -2,7 +2,7 @@
   <img src="docs/images/icon.webp" alt="FitBit AirV mint-green V with a pulse line" width="88">
   <h1>FitBit AirV</h1>
   <p>Selected Android notifications, felt on your Fitbit Air.</p>
-  <p><a href="https://github.com/error0327/fitbit-vib/releases/latest"><strong>Download the latest APK</strong></a></p>
+  <p><a href="https://github.com/error0327/FitBit-AirV/releases/latest"><strong>Download the latest APK</strong></a></p>
 </div>
 
 FitBit AirV is an independent Android companion for the screenless Fitbit Air. Choose which apps can make your band buzz while Google Health continues to handle pairing, health sync, alarms, and tracker settings.
@@ -26,7 +26,7 @@ Screenshots use an Android emulator with sample notifications.
 
 You need Android **12L (API 32) or later**, Bluetooth, and **one Fitbit Air** already paired to that phone in Google Health.
 
-1. Download the signed APK from [GitHub Releases](https://github.com/error0327/fitbit-vib/releases/latest) and open it on Android.
+1. Download the signed APK from [GitHub Releases](https://github.com/error0327/FitBit-AirV/releases/latest) and open it on Android.
 2. Open FitBit AirV and allow **Nearby devices**.
 3. In the setup popup or **Settings**, enable **Notification access**. If Android restricts listener access for a sideloaded app, open FitBit AirV's Android **App info** and check the overflow menu for **Allow restricted settings**.
 4. If background alerts are delayed, tap **Open Android battery settings** in the setup popup or in **Settings**. This opens Android’s **App info** page for FitBit AirV. Open **Battery** or **Battery usage** to manage background activity.
